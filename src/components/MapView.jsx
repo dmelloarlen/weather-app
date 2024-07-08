@@ -52,7 +52,7 @@ export default function MapChart({lat,lon}) {
   };
 
   return [(
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: "79", width: "100%" }}>
         <button type="submit" onClick={handleUpdateLocation}>Update Location</button>
     <div>
         {/* <strong>Latitude:</strong> {userLocation[0]}

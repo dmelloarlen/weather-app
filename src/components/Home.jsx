@@ -74,14 +74,14 @@ export default function Home() {
         {data &&( 
           <>
             <h1>{data.name}</h1>
-        <div className="container container2 d-flex justify-content-between" style={{ border: "2px solid red" }}>
-            <div className="m-5 fw-bold">
-            <h1>{data.main.temp.toString().split('.')[0]}°C<img src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`} style={{ width: "75px", marginLeft:"10px"}} /></h1>
-              <h1 >{data.weather[0].main}</h1>
+        <div className="container container2 d-flex" style={{ border:"2px solid red" }}>
+            <div className="fw-bold innern">
+              <h1>{data.main.temp.toString().split('.')[0]}°C<img src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`} style={{ width: "75px", marginLeft:"10px"}} /></h1>
+              <h1 id="h1">{data.weather[0].description}</h1>
             </div>
             <div>
               <br />
-              <div className="" style={{ marginRight: "10px" }}>
+              <div className="listcontainer" style={{ marginRight: "10px" }}>
                 <ul>
                   <li className="list">Feel's like:{data.main.feels_like.toString().split('.')[0]}°C</li>
                   <li className="list">Humidity:{data.main.humidity}</li>

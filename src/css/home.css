@@ -17,23 +17,40 @@ body{
 
 .container2{
     display: flex;
+    justify-content: space-between;
     background-color: #ffffff79;
     height: 100%;
     color: rgb(255, 255, 255);
+}
+.innern{
+    margin:3rem;
 }
 #btn1{
     width: 9rem;
 }
 
-@media (max-width:930px){
+
+@media (max-width:900px){
     .container{
         width: 100%;
+    }
+    .container2{
+        flex-wrap: wrap;
+    }
+    .listcontainer{
+        /* border: 2px solid red; */
+        /* margin-top: -27px; */
+    }
+    .listcontainer ul{
+        /* margin-left: 0px; */
+    }
+    .innern{
+        margin-bottom: 0px;
     }
     #btn1{
         width: 5rem;
     }
 }
-
 .list{
     list-style: none;
 }
