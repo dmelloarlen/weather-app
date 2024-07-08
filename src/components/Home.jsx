@@ -17,7 +17,7 @@ export default function Home() {
         const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4debf817642222ddbfc43dab0fba7400&units=metric`);
         setData(res.data);
       } catch (error) {
-       console.error(error);
+       alert("City not found");
       }
     };
     getContent(city);
@@ -45,6 +45,9 @@ export default function Home() {
 
   const handleClick = () => {
     setCity(inputRef.current.value);
+    setTimeout(() => {
+      inputRef.current.value=''
+    }, 1000);
   };
   return (
     <div>
