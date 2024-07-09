@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import "../css/home.css"
 import L from 'leaflet';
 
 const userIcon = new L.Icon({
@@ -50,10 +51,11 @@ export default function MapChart({lat,lon}) {
       isFinite(lon) && Math.abs(lon) <= 180
     );
   };
+  
 
   return [(
     <div style={{ height: "79", width: "100%" }}>
-        <button type="submit" onClick={handleUpdateLocation}>Update Location</button>
+        <button className="ulbtn" type="submit" onClick={handleUpdateLocation}>Update Location</button>
     <div>
         {/* <strong>Latitude:</strong> {userLocation[0]}
         <br />
